@@ -1,0 +1,38 @@
+*{
+	padding: 0;
+	margin: 0;
+	box-sizing: border-box;
+}
+
+.bg{
+	background: red;
+}
+.form-container{
+	margin: 90px 0px 10px 0px;
+	background: white;
+	padding: 30px 30px 10px 30px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px 0px black;
+}
+
+.form-container2{
+	margin: 10px 0px 10px 0px;
+	background: white;
+	padding: 30px 30px 10px 30px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px 0px black;
+}
+
+
+.form-container3{
+	margin: 10px 0px 69px 0px;
+	background: white;
+	padding: 30px 30px 10px 30px;
+	border-radius: 10px;
+	box-shadow: 0px 0px 10px 0px black;
+}
+
+.u{
+	margin-bottom: 20px;
+	border: 2px solid black;
+}
