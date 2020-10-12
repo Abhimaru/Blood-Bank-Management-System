@@ -16,11 +16,13 @@
 		margin-left: 30px;
 	}
 	a{
-		font-size: 17px;
-		color: white;	
+		font-size: 16px;
 	}
 	a:hover{
 		text-decoration: none;
+	}
+	.c{
+		color: white;
 	}
 	.instagram:hover{
 		color: rgb(232, 12, 67);
@@ -49,13 +51,13 @@
 					FOLLOW US ON :
 				</li>
 				<li>
-              		<a href="#" class="instagram"><i class="fa fa-instagram"></i>&nbsp;Instagram</a>
+              		<a href="#" class="instagram c"><i class="fa fa-instagram"></i>&nbsp;Instagram</a>
 				</li>
 				<li>
-					<a href="#" class="facebook"><i class="fa fa-facebook"></i>&nbsp;Facebook</a>
+					<a href="#" class="facebook c"><i class="fa fa-facebook"></i>&nbsp;Facebook</a>
 				</li>
 				<li>
-					<a href="#" class="twitter"><i class="fa fa-twitter"></i>&nbsp;Twitter</a>
+					<a href="#" class="twitter c"><i class="fa fa-twitter"></i>&nbsp;Twitter</a>
 				</li>
 			</ul>
 		</div>
