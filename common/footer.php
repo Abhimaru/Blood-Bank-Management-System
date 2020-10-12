@@ -2,15 +2,36 @@
 <html>
 <head>
 
+	<meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
 	<style type="text/css">
 	.left p{
-	font-size: 23px;
+		font-size: 23px;
 	}
 	.right ul li{
-	display: inline-block;
-	list-style: none;
-	margin-left: 30px;
+		display: inline-block;
+		list-style: none;
+		margin-left: 30px;
 	}
+	a{
+		font-size: 17px;
+		color: white;	
+	}
+	a:hover{
+		text-decoration: none;
+	}
+	.instagram:hover{
+		color: rgb(232, 12, 67);
+	}
+	.facebook:hover{
+		color: rgb(10, 45, 245);
+	}
+	.twitter:hover{
+		color: rgb(5, 201, 245);
+	}
+
 	</style>
 </head>
 <body>
@@ -28,13 +49,13 @@
 					FOLLOW US ON :
 				</li>
 				<li>
-					<a href="#">Instagram</a>
+              		<a href="#" class="instagram"><i class="fa fa-instagram"></i>&nbsp;Instagram</a>
 				</li>
 				<li>
-					<a href="#">Facebook</a>
+					<a href="#" class="facebook"><i class="fa fa-facebook"></i>&nbsp;Facebook</a>
 				</li>
 				<li>
-					<a href="#">Twitter</a>
+					<a href="#" class="twitter"><i class="fa fa-twitter"></i>&nbsp;Twitter</a>
 				</li>
 			</ul>
 		</div>
