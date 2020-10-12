@@ -89,10 +89,10 @@
                                 <input type="text" name="firstName" placeholder="First Name" class="form-control" value="<?php if(isset($res['Fname'])){echo $res['Fname'];} ?>" required="true">
                             </div>
                             <div class="col-sm-3">
-                                <input type="text" name="middleName" placeholder="Middle Name" class="form-control" value="<?php  if(isset($res['Fname'])){echo $res['Mname'];} ?>">
+                                <input type="text" name="middleName" placeholder="Middle Name" class="form-control" value="<?php  if(isset($res['Mname'])){echo $res['Mname'];} ?>">
                             </div>
                             <div class="col-sm-3">
-                                <input type="text" name="lastName" placeholder="Last Name" class="form-control" value="<?php  if(isset($res['Fname'])){echo $res['Lname'];} ?>" required="true">
+                                <input type="text" name="lastName" placeholder="Last Name" class="form-control" value="<?php  if(isset($res['Lname'])){echo $res['Lname'];} ?>" required="true">
                             </div>
                             </div>
                         </div>
@@ -129,7 +129,7 @@
                             <div class="row">
                             <label class="col-sm-4">D.O.B</label>
                             <div class="col-sm-8">
-                                <input type="date" name="dob" class="form-control" value="<?php  if(isset($res['Fname'])){echo $res['Bdate'];} ?>" >
+                                <input type="date" name="dob" class="form-control" value="<?php  if(isset($res['Bdate'])){echo $res['Bdate'];} ?>" >
                             </div>
                             </div>
                         </div>
@@ -137,7 +137,7 @@
                             <div class="row">
                             <label class="col-sm-4">Address</label>
                             <div class="col-sm-8">
-                                <textarea rows="8" name="address" class="form-control"><?php  if(isset($res['Fname'])){echo $res['Address'];} ?></textarea>
+                                <textarea rows="8" name="address" class="form-control"><?php  if(isset($res['Address'])){echo $res['Address'];} ?></textarea>
                             </div>
                             </div>
                         </div>
@@ -145,7 +145,7 @@
                             <div class="row">
                             <label class="col-sm-4">City</label>
                             <div class="col-sm-8">
-                                <input type="text" name="city" class="form-control" value="<?php  if(isset($res['Fname'])){echo $res['City'];} ?>" >
+                                <input type="text" name="city" class="form-control" value="<?php  if(isset($res['City'])){echo $res['City'];} ?>" >
                             </div>
                             </div>
                         </div>
@@ -153,7 +153,7 @@
                             <div class="row">
                             <label class="col-sm-4">Mobile Number-1 </label>
                             <div class="col-sm-8">
-                                <input type="number" name="mobile" class="form-control" value="<?php  if(isset($res['Fname'])){echo $res['Mobile1'];} ?>" >
+                                <input type="number" name="mobile" class="form-control" value="<?php  if(isset($res['Mobile1'])){echo $res['Mobile1'];} ?>" >
                             </div>
                             </div>
                         </div>
@@ -161,7 +161,7 @@
                             <div class="row">
                             <label class="col-sm-4">Mobile Number-2</label>
                             <div class="col-sm-8">
-                                <input type="number" name="phone" class="form-control" value="<?php  if(isset($res['Fname'])){echo $res['Mobile2'];} ?>">
+                                <input type="number" name="phone" class="form-control" value="<?php  if(isset($res['Mobile2'])){echo $res['Mobile2'];} ?>">
                             </div>
                             </div>
                         </div>           
@@ -174,7 +174,7 @@
                             <div class="row">
                             <label class="col-sm-4">Date of Donation</label>
                             <div class="col-sm-8">
-                                <input type="date" name="don_date"  class="form-control" value="<?php  if(isset($res['Fname'])){echo $res['Dondate'];} ?>">
+                                <input type="date" name="don_date"  class="form-control" value="<?php  if(isset($res['Dondate'])){echo $res['Dondate'];} ?>">
                             </div>
                             </div>  
                         </div>
@@ -182,7 +182,7 @@
                             <div class="row">
                             <label class="col-sm-4">Statistics</label>
                             <div class="col-sm-8">
-                                <input type="text" name="stats"  placeholder="ex. Normal" class="form-control" value="<?php  if(isset($res['Fname'])){echo $res['Stats'];} ?>">
+                                <input type="text" name="stats"  placeholder="ex. Normal" class="form-control" value="<?php  if(isset($res['Stats'])){echo $res['Stats'];} ?>">
                             </div>
                             </div>
                         </div>
@@ -190,7 +190,7 @@
                             <div class="row">
                             <label class="col-sm-4">Temperature</label>
                             <div class="col-sm-8">
-                                <input type="decimar" name="temp"  placeholder="Enter value in Celsius (°C)" class="form-control" value="<?php  if(isset($res['Fname'])){echo $res['Temp'];} ?>">
+                                <input type="decimar" name="temp"  placeholder="Enter value in Celsius (°C)" class="form-control" value="<?php  if(isset($res['Temp'])){echo $res['Temp'];} ?>">
                             </div>
                             </div>
                         </div>
@@ -198,7 +198,7 @@
                             <div class="row">
                             <label class="col-sm-4">Pulse</label>
                             <div class="col-sm-8">
-                                <input type="number" min="0" max="300" name="pulse" placeholder="ex. 60–100" class="form-control" value="<?php  if(isset($res['Fname'])){echo $res['Pulse'];} ?>">
+                                <input type="number" min="0" max="300" name="pulse" placeholder="ex. 60–100" class="form-control" value="<?php  if(isset($res['Pulse'])){echo $res['Pulse'];} ?>">
                             </div>
                             </div>
                         </div>
@@ -206,7 +206,7 @@
                             <div class="row">
                             <label class="col-sm-4">Blood Pressure</label>
                             <div class="col-sm-8">
-                                <input type="text" name="bp" class="form-control" placeholder="ex. 80 | 120" value="<?php  if(isset($res['Fname'])){echo $res['Bp'];} ?>">
+                                <input type="text" name="bp" class="form-control" placeholder="ex. 80 | 120" value="<?php  if(isset($res['Bp'])){echo $res['Bp'];} ?>">
                             </div>
                             </div>
                         </div>
@@ -214,7 +214,7 @@
                             <div class="row">
                             <label class="col-sm-4">Weight</label>
                             <div class="col-sm-8">
-                                <input type="decimal" name="weight"  placeholder="Enter Value in Kg" class="form-control" value="<?php  if(isset($res['Fname'])){echo $res['Weight'];} ?>">
+                                <input type="decimal" name="weight"  placeholder="Enter Value in Kg" class="form-control" value="<?php  if(isset($res['Weight'])){echo $res['Weight'];} ?>">
                             </div>
                             </div>
                         </div>
@@ -222,7 +222,7 @@
                             <div class="row">
                             <label class="col-sm-4">Hemoglobin</label>
                             <div class="col-sm-8">
-                                <input type="text" name="hemoglobin"  placeholder="Enter value in gm/dL (grams per deciliter)" class="form-control" value="<?php  if(isset($res['Fname'])){echo $res['Hemoglobin'];} ?>">
+                                <input type="text" name="hemoglobin"  placeholder="Enter value in gm/dL (grams per deciliter)" class="form-control" value="<?php  if(isset($res['Hemoglobin'])){echo $res['Hemoglobin'];} ?>">
                             </div>
                             </div>
                         </div>
@@ -266,7 +266,7 @@
                             <div class="row">
                             <label class="col-sm-4">Hematocrit </label>
                             <div class="col-sm-8">
-                                <input type="text" name="hematocrit"  placeholder="Enter Value in percentage(%)" class="form-control" value="<?php  if(isset($res['Fname'])){echo $res['Hematocrit'];} ?>">
+                                <input type="text" name="hematocrit"  placeholder="Enter Value in percentage(%)" class="form-control" value="<?php  if(isset($res['Hematocrit'])){echo $res['Hematocrit'];} ?>">
                             </div>
                             </div>
                         </div>
