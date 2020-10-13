@@ -268,6 +268,10 @@
         $squery = mysqli_query($con, $selectquery);
         $usercount = mysqli_num_rows($squery);
 
+        $selectquery2 = "select * from users where Username='$usrnm'";
+        $squery2 = mysqli_query($con, $selectquery2);
+        $usercount2 = mysqli_num_rows($squery2);
+
         if($usercount>0){
             ?>
                 <script>
@@ -278,7 +282,7 @@
         else{
          $insertquery = "insert into donor(Username, Fname, Mname, Lname, Gender, Bloodgroup, Bdate, Address, City, Dondate, Stats, Temp, Pulse, Bp, Weight, Hemoglobin, Hbsag, Aids, MalariaSmear, Hematocrit, Mobile1, Mobile2) values('$usrnm','$fname', '$mname', '$lname', '$sex', '$bType', '$dob', '$address', '$city', '$donationDate', '$stats', '$temp', '$pulse', '$bp', '$weight','$hemoglobin', '$hbsag', '$aids', '$malariaSmear', '$hematocrit', '$mobile', '$phone')";
          $query = mysqli_query($con, $insertquery);
-         if ($query) {
+         if ($query && $usercount2=0) {
              $h_pass = password_hash("abc", PASSWORD_BCRYPT);
              $useriquery = "insert into users(Username, Password) values('$usrnm','$h_pass')";
              $iquery = mysqli_query($con, $useriquery);
