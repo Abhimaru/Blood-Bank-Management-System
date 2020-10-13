@@ -12,8 +12,57 @@
 	<link rel="stylesheet" type="text/css" href="css/login_style.css?v=<?php echo time();?>">
 </head>
 <body>
+	<!-- PHP PART START-->
+		<?php
+			include "../common/connection.php";
+			$AlertUsername = false;
+			$AlertPassword = false;
+			if(isset($_POST['login'])){
+
+				$usrnm = $_POST['username'];
+				$pass = $_POST['password'];
+				if($usrnm == "admin"){
+					if($pass == "123"){
+						$_SESSION['Username'] = "admin";
+						header("location:index.php");
+					}
+					else{			
+						$AlertPassword = true;
+					}
+				}
+				else{
+					$AlertUsername = true;
+				}
+			}
+		?>
+		<!-- PHP PART END -->
 <section>
 	<div class="container-fluid bg">
+		<?php
+			if($AlertUsername){
+		?>
+			<div class="alert alert-danger alert-dismissible fade show" role="alert">
+			  Invalid Username
+			  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			    <span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+		<?php
+			}
+		?>
+
+		<?php
+			if($AlertPassword){
+		?>
+			<div class="alert alert-danger alert-dismissible fade show" role="alert">
+			  Incorrect Password try again
+			  <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+			    <span aria-hidden="true">&times;</span>
+			  </button>
+			</div>
+		<?php
+			}
+		?>
 		<div class="row justify-content-center">
 			<div class="col-12 col-sm-6 col-md-3">
 				<form class="form-container" method="post">
@@ -36,30 +85,6 @@
 
 <?php include "../common/footer.php"?>
 
-<p style="position: absolute; color: white; margin: -150px 0px 0px 530px;" class="text-center">
-		<!-- PHP PART START-->
-		<?php
-			include "../common/connection.php";
-			if(isset($_POST['login'])){
-
-				$usrnm = $_POST['username'];
-				$pass = $_POST['password'];
-				if($usrnm == "admin"){
-					if($pass == "123"){
-						$_SESSION['Username'] = "admin";
-						header("location:index.php");
-					}
-					else{
-						echo "*Password Inccorect*";
-					}
-				}
-				else{
-					echo "*Invalid Username*";
-				}
-			}
-		?>
-		<!-- PHP PART END -->
-</p>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
