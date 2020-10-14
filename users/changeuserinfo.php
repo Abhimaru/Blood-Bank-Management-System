@@ -23,7 +23,7 @@
 						<h4 class="text-center u">CHANGE USERNAME</h4>
 						<div class="row">
 							<div class="col-sm-8">
-								<input type="text" class="form-control" id="Username" placeholder="Enter New Username" name="username"><br>
+								<input type="text" class="form-control" id="Username" placeholder="Enter New Username" name="username" required="true"><br>
 							</div>	
 
 							<div class="col-sm-4">
@@ -39,11 +39,11 @@
 						<div class="row">
 
 							<div class="col-sm-12">
-								<input type="password" class="form-control" id="Username" placeholder="Enter New password" name="newpass"><br>
+								<input type="password" class="form-control" id="Username" placeholder="Enter New password" name="newpass" required="true"><br>
 							</div>	
 
 							<div class="col-sm-12">
-								<input type="password" class="form-control" id="Username" placeholder="Confirm New password" name="cnewpass"><br>
+								<input type="password" class="form-control" id="Username" placeholder="Confirm New password" name="cnewpass" required="true"><br>
 							</div>	
 
 							<div class="col-sm-12">

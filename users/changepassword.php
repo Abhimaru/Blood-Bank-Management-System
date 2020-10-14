@@ -19,6 +19,7 @@
 		}
 		else{
 			echo "Passwords are not match";
+			header("location:changeuserinfo.php");
 		}
 	}
 ?>
