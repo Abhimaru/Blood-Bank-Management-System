@@ -99,10 +99,10 @@
                             <div class="row">
                             <label class="col-sm-4">Gender</label>
                             <div class="col-sm-4">
-                            <input type="radio" value="male" name="sex" <?php if($res['Gender']== "male"){echo "checked";}?>>Male                         
+                            <input type="radio" value="male" name="sex" <?php if(isset($res['Gender']) && $res['Gender']== "male"){echo "checked";}?>>Male                         
                             </div>
                             <div class="col-sm-4">
-                            <input type="radio" value="female" name="sex" <?php if($res['Gender']== "female"){echo "checked";}?>>Female   
+                            <input type="radio" value="female" name="sex" <?php if(isset($res['Gender']) && $res['Gender']== "female"){echo "checked";}?>>Female   
                             </div>                       
                         </div>
                         </div>
