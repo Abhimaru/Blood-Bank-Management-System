@@ -63,14 +63,15 @@
 					<table width="1300px">
 						<thead>
 							<tr>
+								<th>Id</th>
 								<th>Name</th>
 								<th>Gender</th>
 								<th>Bloodgroup</th>
-								<th>Birth Date</th>
 								<th>Address</th>
 								<th>City</th>
 								<th>Mobile 1</th>
 								<th>Mobile 2</th>
+								<th>Action</th>
 							</tr>
 						</thead>
 
@@ -81,7 +82,7 @@
 								if(isset($_POST['search'])){
 									$bloodtype = $_POST['b_type'];
 
-									$selectquery = "select Fname, Mname, Lname, Gender, Bloodgroup, Bdate, Address, City, Mobile1, Mobile2 from donor where Bloodgroup = '$bloodtype'";
+									$selectquery = "select id,Fname, Mname, Lname, Gender, Bloodgroup, Bdate, Address, City, Mobile1, Mobile2 from donor where Bloodgroup = '$bloodtype'";
 
 									$query = mysqli_query($con, $selectquery);
 
@@ -89,23 +90,25 @@
 									while($res = mysqli_fetch_array($query)){
 							?>
 										<tr>
+											<td><?php echo $res['id'] ?></td>
 					      <td class="text-left"><?php echo $res['Fname']." "; 
 												      echo $res['Mname']." ";
 												      echo $res['Lname']; ?></td>
 											<td><?php echo $res['Gender'] ?></td>
 											<td><?php echo $res['Bloodgroup'] ?></td>
-											<td><?php echo $res['Bdate'] ?></td>
 											<td><?php echo $res['City'] ?></td>
 						  <td class="text-left"><?php echo $res['Address'] ?></td>
 											<td><?php echo $res['Mobile1'] ?></td>
 											<td><?php echo $res['Mobile2'] ?></td>
+											<td><a href="donordetails.php?id=<?php echo $res['id'] ?>">SEE INFO</a></td>
+
 										</tr>
 								<?php	
 									}
 
 								}
 								else{
-									$selectquery = "select Fname, Mname, Lname, Gender, Bloodgroup, Bdate, Address, City, Mobile1, Mobile2 from donor";
+									$selectquery = "select id,Fname, Mname, Lname, Gender, Bloodgroup, Bdate, Address, City, Mobile1, Mobile2 from donor";
 
 										$query = mysqli_query($con, $selectquery);
 
@@ -113,16 +116,18 @@
 										while($res = mysqli_fetch_array($query)){
 								?>
 											<tr>
+												<td><?php echo $res['id'] ?></td>
 						      <td class="text-left"><?php echo $res['Fname']." "; 
 													      echo $res['Mname']." ";
 													      echo $res['Lname']; ?></td>
 												<td><?php echo $res['Gender'] ?></td>
 												<td><?php echo $res['Bloodgroup'] ?></td>
-												<td><?php echo $res['Bdate'] ?></td>
 												<td><?php echo $res['City'] ?></td>
 							  <td class="text-left"><?php echo $res['Address'] ?></td>
 												<td><?php echo $res['Mobile1'] ?></td>
 												<td><?php echo $res['Mobile2'] ?></td>
+												<td><a href="donordetails.php?id=<?php echo $res['id'] ?>">SEE INFO</a></td>
+
 											</tr>
 									<?php	
 										}
