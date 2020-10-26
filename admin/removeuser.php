@@ -26,12 +26,13 @@
 
 	<h1>LIST OF DONORS</h1>
 	<div class="main-div">
-				<div class="table-responsive table-striped">
-					<table>
+				<div class="table-responsive table-striped ">
+					<table width="1000px">
 						<thead>
 							<tr>
 								<th>Id</th>
 								<th>Username</th>
+								<th>Action</th>
 							</tr>
 						</thead>
 
@@ -64,7 +65,7 @@
 		</div>
 </section>
 
-<?php include "../common/footer.php"?>
+<?php //include "../common/footer.php"?>
 
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 

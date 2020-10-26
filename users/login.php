@@ -76,12 +76,12 @@
 				<form class="form-container" method="post">
 					<div class="form-group">
 						<label for="Username">Username</label>
-						<input type="text" class="form-control" id="Username" placeholder="Enter Username" name="username"  required="true">
+						<input type="text" class="form-control" id="Username" placeholder="Enter Username" name="username"  required="true" autocomplete="off">
 					</div>
 					<div class="form-group">
 						<label for="password">Password</label>
 						<input type="password" class="form-control" id="password" placeholder="Password"
-						name="password"  required="true">
+						name="password"  required="true" autocomplete="off">
 					</div>
 
 					<button type="submit" class="btn btn-danger btn-block" name="login">Login</button>

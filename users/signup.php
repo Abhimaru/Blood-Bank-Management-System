@@ -76,16 +76,16 @@
 				<form class="form-container" method="post">
 					<div class="form-group">
 						<label for="Username">Username</label>
-						<input type="text" class="form-control" maxlength="15" id="Username" placeholder="Enter Username" name="username" required="true">
+						<input type="text" class="form-control" maxlength="15" id="Username" placeholder="Enter Username" name="username" required="true" autocomplete="off">
 					</div>
 					<div class="form-group">
 						<label for="password">Password</label>
 						<input type="password" class="form-control" id="password" placeholder="Password"
-						name="password"  required="true">
+						name="password"  required="true" autocomplete="off">
 					</div>
 					<div class="form-group">
 						<label for="passwordc">Password</label>
-						<input type="password" class="form-control" id="passwordc" placeholder="Confirm Password" name="cpassword"  required="true">
+						<input type="password" class="form-control" id="passwordc" placeholder="Confirm Password" name="cpassword"  required="true" autocomplete="off">
 					</div>
 					<button type="submit" class="btn btn-danger btn-block" name="join">JOIN</button>
 

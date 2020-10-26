@@ -27,7 +27,7 @@
 	<h1>LIST OF DONORS</h1>
 	<div class="main-div">
 				<div class="table-responsive table-striped">
-					<table>
+					<table width="1300px">
 						<thead>
 							<tr>
 								<th>Id</th>
@@ -37,6 +37,7 @@
 								<th>Birth Date</th>
 								<th>City</th>
 								<th>Address</th>
+								<th>Action</th>
 							</tr>
 						</thead>
 
@@ -76,7 +77,7 @@
 		</div>
 </section>
 
-<?php include "../common/footer.php"?>
+<?php //include "../common/footer.php"?>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>

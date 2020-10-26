@@ -24,10 +24,10 @@
 			<div class="col-12 col-sm-6 col-md-8">
 				<form class="form-container" method="post">
 					<div class="text-center">
-						<h1>*****CLICK THE DELETE BUTTON*****</h1>
+						<h1>DELETE INFORMATION</h1>
 					</div>
-					
-					<button type="submit" class="btn btn-danger btn-block" name="delete">DELETE</button>
+					<br>
+					<button type="submit" class="btn btn-danger btn-block" name="delete">DELETE INFORMATION</button>
 				</form>
 			</div>
 		</div>

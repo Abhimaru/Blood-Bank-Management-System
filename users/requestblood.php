@@ -61,7 +61,7 @@
 			<h1>LIST OF DONORS</h1>
 			<!-- <div class="center-div"> -->
 				<div class="table-responsive table-striped">
-					<table>
+					<table width="1300px;">
 						<thead>
 							<tr>
 								<th>Name</th>
