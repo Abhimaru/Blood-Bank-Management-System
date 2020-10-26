@@ -65,12 +65,12 @@
 							<tr>
 								<th>Name</th>
 								<th>Gender</th>
-								<th>Bloodgroup</th></th>
+								<th>Bloodgroup</th>
+								<th>Birth Date</th>
 								<th>Address</th>
 								<th>City</th>
 								<th>Mobile 1</th>
 								<th>Mobile 2</th>
-								<th>Action</th>
 							</tr>
 						</thead>
 
@@ -94,11 +94,11 @@
 												      echo $res['Lname']; ?></td>
 											<td><?php echo $res['Gender'] ?></td>
 											<td><?php echo $res['Bloodgroup'] ?></td>
+											<td><?php echo $res['Bdate'] ?></td>
 											<td><?php echo $res['City'] ?></td>
 						  <td class="text-left"><?php echo $res['Address'] ?></td>
 											<td><?php echo $res['Mobile1'] ?></td>
 											<td><?php echo $res['Mobile2'] ?></td>
-											<td><a href="donordetails.php?id=<?php echo $res['id'] ?>">SEE FULL INFO</a></td>
 										</tr>
 								<?php	
 									}
@@ -118,11 +118,11 @@
 													      echo $res['Lname']; ?></td>
 												<td><?php echo $res['Gender'] ?></td>
 												<td><?php echo $res['Bloodgroup'] ?></td>
+												<td><?php echo $res['Bdate'] ?></td>
 												<td><?php echo $res['City'] ?></td>
 							  <td class="text-left"><?php echo $res['Address'] ?></td>
 												<td><?php echo $res['Mobile1'] ?></td>
 												<td><?php echo $res['Mobile2'] ?></td>
-												<td><a href="donordetails.php?id=<?php echo $res['id'] ?>">SEE</a></td>
 											</tr>
 									<?php	
 										}
