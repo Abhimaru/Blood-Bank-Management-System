@@ -144,7 +144,14 @@
                             <div class="row">
                             <label class="col-sm-4">City</label>
                             <div class="col-sm-8">
-                                <input type="text" name="city" class="form-control" value="<?php  if(isset($res['City'])){echo $res['City'];} ?>" >
+                                <select name="city" class="form-control">
+                                    <option value="<?php if(isset($res['City'])){echo $res['City'];}?>">Your City: <?php if(isset($res['City'])){echo $res['City'];}?></option>
+                                    <option value="PORBANDAR">PORBANDAR</option>
+                                    <option value="JAMNAGAR">JAMNAGAR</option>
+                                    <option value="VADODARA">VADODARA</option>
+                                    <option value="AHMEDABAD">AHMEDABAD</option>
+                                    <option value="RAJKOT">RAJKOT</option>
+                                </select>
                             </div>
                             </div>
                         </div>

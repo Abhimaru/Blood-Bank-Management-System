@@ -99,7 +99,13 @@
                             <div class="row">
                             <label class="col-sm-4">City</label>
                             <div class="col-sm-8">
-                                <input type="text" name="city" class="form-control" required="true">
+                                <select name="city" class="form-control">
+                                    <option value="PORBANDAR">PORBANDAR</option>
+                                    <option value="JAMNAGAR">JAMNAGAR</option>
+                                    <option value="VADODARA">VADODARA</option>
+                                    <option value="AHMEDABAD">AHMEDABAD</option>
+                                    <option value="RAJKOT">RAJKOT</option>
+                                </select>
                             </div>
                             </div>
                         </div>

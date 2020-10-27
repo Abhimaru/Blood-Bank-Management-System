@@ -32,7 +32,7 @@
             $res = mysqli_fetch_array($query);
 
             if(isset($_POST['back'])){
-                    header("location:donorlist.php");
+                    header("location:requestblood.php");
             }
 
 ?>
@@ -123,14 +123,6 @@
                         <h2>Donor Medical Info</h2>
                     </div>
                     <div class="card-body">
-                        <div class="form-group">
-                            <div class="row">
-                            <label class="col-sm-4">Date of Donation</label>
-                            <div class="col-sm-8">
-                                <input type="date" name="don_date"  class="form-control" value="<?php  if(isset($res['Dondate'])){echo $res['Dondate'];} ?>" readonly>
-                            </div>
-                            </div>  
-                        </div>
                         <div class="form-group">
                             <div class="row">
                             <label class="col-sm-4">Statistics</label>

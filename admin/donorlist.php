@@ -49,6 +49,25 @@
                             </div>
                         </div>
                     </div>
+
+                    <div class="form-group">
+                        <div class="row">
+                        <label class="col-sm-4">City:</label>
+                        <div class="col-sm-5">
+                            <select name="city" class="form-control">
+                                <option value="PORBANDAR">PORBANDAR</option>
+                                <option value="JAMNAGAR">JAMNAGAR</option>
+                                <option value="VADODARA">VADODARA</option>
+                                <option value="AHMEDABAD">AHMEDABAD</option>
+                                <option value="RAJKOT">RAJKOT</option>
+							</select>
+                        </div>
+
+                        <div class="col-sm-3">
+                                <button class="btn btn-success" type="submit" name="search2" >SEARCH</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 				</form>
 			</div>
@@ -102,6 +121,35 @@
 											<td><?php echo $res['Mobile2'] ?></td>
 											<td><a href="donordetails.php?id=<?php echo $res['id'] ?>">SEE INFO</a></td>
 
+										</tr>
+								<?php	
+									}
+
+								}
+
+
+								elseif(isset($_POST['search2'])){
+									$city = $_POST['city'];
+									$usrnm = $_SESSION['Username'];
+									$selectquery = "select id,Fname, Mname, Lname, Gender, Bloodgroup, Bdate, Address, City, Mobile1, Mobile2 from donor where City = '$city' and Username != '$usrnm'";
+
+									$query = mysqli_query($con, $selectquery);
+
+
+									while($res = mysqli_fetch_array($query)){
+							?>
+										<tr>
+											<td><?php echo $res['id'] ?></td>
+					      <td class="text-left"><?php echo $res['Fname']." "; 
+												      echo $res['Mname']." ";
+												      echo $res['Lname']; ?></td>
+											<td><?php echo $res['Gender'] ?></td>
+											<td><?php echo $res['Bloodgroup'] ?></td>
+											<td><?php echo $res['City'] ?></td>
+						  <td class="text-left"><?php echo $res['Address'] ?></td>
+											<td><?php echo $res['Mobile1'] ?></td>
+											<td><?php echo $res['Mobile2'] ?></td>
+											<td><a href="donorreqdetails.php?id=<?php echo $res['id'] ?>">SEE INFO</a></td>
 										</tr>
 								<?php	
 									}
