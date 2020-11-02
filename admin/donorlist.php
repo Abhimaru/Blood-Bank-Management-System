@@ -25,7 +25,7 @@
 				<form method="post" class="form-container">
 					<div class="card">
                     <div class="card-title text-center">
-                        <h2>SEARCH BY BLOODGROUP</h2>
+                        <h2>SEARCH BY BLOODGROUP & CITY</h2>
                     </div>
                     <div class="card-body">
 					<div class="form-group">
@@ -67,6 +67,11 @@
                                 <button class="btn btn-success" type="submit" name="search2" >SEARCH</button>
                             </div>
                         </div>
+                    </div>
+
+                    <div class="col-sm-12">
+                                <button class="btn btn-success btn-block" type="submit" name="search3">SEARCH</button>
+                            </div>
                     </div>
                 </div>
 				</form>
@@ -149,12 +154,44 @@
 						  <td class="text-left"><?php echo $res['Address'] ?></td>
 											<td><?php echo $res['Mobile1'] ?></td>
 											<td><?php echo $res['Mobile2'] ?></td>
-											<td><a href="donorreqdetails.php?id=<?php echo $res['id'] ?>">SEE INFO</a></td>
+											<td><a href="donordetails.php?id=<?php echo $res['id'] ?>">SEE INFO</a></td>
 										</tr>
 								<?php	
 									}
 
 								}
+
+
+								elseif(isset($_POST['search3'])){
+									$city = $_POST['city'];
+									$bloodtype = $_POST['b_type'];
+									$usrnm = $_SESSION['Username'];
+									$selectquery = "select id,Fname, Mname, Lname, Gender, Bloodgroup, Bdate, Address, City, Mobile1, Mobile2 from donor where City = '$city' and Bloodgroup = '$bloodtype' and Username != '$usrnm'";
+
+									$query = mysqli_query($con, $selectquery);
+
+
+									while($res = mysqli_fetch_array($query)){
+							?>
+										<tr>
+											<td><?php echo $res['id'] ?></td>
+					      <td class="text-left"><?php echo $res['Fname']." "; 
+												      echo $res['Mname']." ";
+												      echo $res['Lname']; ?></td>
+											<td><?php echo $res['Gender'] ?></td>
+											<td><?php echo $res['Bloodgroup'] ?></td>
+											<td><?php echo $res['City'] ?></td>
+						  <td class="text-left"><?php echo $res['Address'] ?></td>
+											<td><?php echo $res['Mobile1'] ?></td>
+											<td><?php echo $res['Mobile2'] ?></td>
+											<td><a href="donordetails.php?id=<?php echo $res['id'] ?>">SEE INFO</a></td>
+										</tr>
+								<?php	
+									}
+
+								}
+
+
 								else{
 									$selectquery = "select id,Fname, Mname, Lname, Gender, Bloodgroup, Bdate, Address, City, Mobile1, Mobile2 from donor";
 
@@ -180,6 +217,7 @@
 									<?php	
 										}
 							}
+
 							 ?>
 						</tbody>
 					</table>
