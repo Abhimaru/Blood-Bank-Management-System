@@ -111,7 +111,7 @@
                             <div class="row">
                             <label class="col-sm-4">Blood Type:</label>
                             <div class="col-sm-8">
-                                <select name="city" class="form-control" >
+                                <select name="b_type" class="form-control" >
                                     <option value="<?php if(isset($res['Bloodgroup'])){echo $res['Bloodgroup'];}?>">Your Bloodgroup: <?php if(isset($res['Bloodgroup'])){echo $res['Bloodgroup'];}?></option>
                                     <option value="O+">O+</option>
                                     <option value="O-">O-</option>
