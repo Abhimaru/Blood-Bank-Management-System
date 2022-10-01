@@ -10,4 +10,6 @@ How to use this project?
 6. For admin login username=admin and password=123.
 7. That's It.
 
+For watch demo of the site 👉 "http://bloodbankmanagement.epizy.com/"
+
 
